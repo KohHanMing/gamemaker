@@ -20,4 +20,4 @@ dartDirection = ""; //direction
 dartDestination = 0; //x-location to move towards
 dartSteps = 8; //how fast the animation is
 dartSteps_remaining = dartSteps; // counter for mozzie dart movement
-sprite_index = mosquito
+sprite_index = spr_mosquito
