@@ -3,6 +3,10 @@ var isInAttackRange = x > 200 && x < 700 ;
 var yIsRanged = y < 400;
 var yIsMelee =  y > 400;
 
+// make divisible by 4
+var dartDist = 100;
+
+
 
 //Prevent mosquito from going off screen
 if (x > room_width) {
@@ -84,6 +88,64 @@ if (yIsRanged) {
 		move_towards_point(450, 724, 10)
 	} else {
 		
+	}
+}
+
+// identify possible directions for dart and select one
+if (yIsRanged) {
+	if (dartTimer > 0) {
+		dartTimer  -= 1
+	} else if (dartDirection == "") { 
+		hspeed = 0;
+		vspeed = 0;
+		if (x - dartDist >= 200 && x + dartDist <= 700) { 
+			// if both darts possible
+			var chooseDirection = irandom(1)
+			if (chooseDirection == 0) {
+				//sprite_index = spr_mosquito_left;
+				dartDestination = x - dartDist;
+				dartDirection = "left";
+			} else {
+				//sprite_index = spr_mosquito_right;
+				dartDestination = x + dartDist;
+				dartDirection = "right";
+			}		
+		} else if (x - dartDist < 200) {
+			// right dart only
+			//sprite_index = spr_mosquito_right;
+			dartDestination = x + dartDist;
+			dartDirection = "right";
+		} else {
+			//left dart only
+			//sprite_index = spr_mosquito_left;
+			dartDestination = x - dartDist;
+			dartDirection = "left";
+		}
+	} 		
+}
+
+
+// tick down timer for pre-dart visual cue and execute dart
+if (dartDirection != "") {
+	if (dartChargeTimer > 0) {
+	dartChargeTimer -= 1;
+	} else if (dartDirection == "left" && dartSteps_remaining > 0) {
+		x -= dartDist/dartSteps;
+		dartSteps_remaining -= 1;
+	} else if (dartDirection == "right" && dartSteps_remaining > 0) {
+		x += dartDist/dartSteps;
+		dartSteps_remaining -= 1;
+	} else {
+		dartChargeTimer = 60;
+		dartTimer = irandom_range(300, 360);
+		dartSteps_remaining = dartSteps
+		if (dartDirection == "left") {
+			hspeed = -3;
+		} else {
+			hspeed = 3;
+		}
+		vspeed = 0.4
+		dartDirection = ""
 	}
 }
 
