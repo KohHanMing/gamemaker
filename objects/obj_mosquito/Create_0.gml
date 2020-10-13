@@ -12,3 +12,12 @@ hasExecutedMelee = false;
 
 isRewind = false;
 rewindTimer = 0;
+
+
+dartTimer = 300; // timing between each dart
+dartChargeTimer = 60; //time it stays still before dart
+dartDirection = ""; //direction
+dartDestination = 0; //x-location to move towards
+dartSteps = 8; //how fast the animation is
+dartSteps_remaining = dartSteps; // counter for mozzie dart movement
+sprite_index = mosquito
