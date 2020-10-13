@@ -1,0 +1,1 @@
+finalScore = 0;

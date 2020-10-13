@@ -1,0 +1,1 @@
+hasRecordedMeleeDamage = false;

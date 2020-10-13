@@ -1,0 +1,27 @@
+if (rechargeTimer <= 0 && !hasDrawnRewind) {
+	with(obj_game) {
+		drawRewindAlpha = 1;
+		drawRewindTimer = 60;
+	}
+	hasDrawnRewind = true;
+} else if (rechargeTimer <= 0) {
+	if (hasPressedRewind && rewindTimer > 0) {
+		image_blend = make_color_rgb(255, 255, 255);
+		image_xscale -= 0.0033;
+		rewindTimer -= 1;
+	} else if (!hasPressedRewind) {
+		
+	} else {
+		//Reset after pressing
+		image_xscale = 0.01;
+		rechargeTimer = 3600;
+		hasPressedRewind = false;
+		hasDrawnRewind = false;
+	}
+} else {
+	rechargeTimer -= 1
+	col_r -= 2
+
+	image_blend = make_color_rgb(col_r, 255, 255)
+	image_xscale += 0.000275
+}
