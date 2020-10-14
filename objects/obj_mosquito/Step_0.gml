@@ -167,8 +167,41 @@ if (dartAttackInMotion) {
 	} 
 }
 
+//cancel dart on hit
 if (not dartAttackInMotion) {
 	sprite_index = spr_mosquito
+}
+
+//stun animations
+if (isStunned) {
+	canAttack = false
+	hspeed = 0
+	vspeed = 0
+	if (swatterDelayTimer > 0) {
+		swatterDelayTimer -= 1
+		if (sprite_index != spr_mosquito_dizzy ) {
+			sprite_index = spr_mosquito_dizzy 
+		}	
+	} else {
+		sprite_index = spr_mosquito_dead
+	}
+	
+	if (swatterDelayTimer == 0) {
+		if (deadDurationTimer > 0) {
+			deadDurationTimer -= 1
+		} else {
+			sprite_index = spr_mosquito
+			isStunned = false
+			hspeed = default_hspeed
+			vspeed = default_vspeed
+			deadDurationTimer = deadDuration
+			swatterDelayTimer = swatterDelay
+			
+			with (obj_game) {
+				__dnd_score += 50 //CHANGE STUN ATTACK SCORE HERE
+			}
+		}
+	}	
 }
 
  

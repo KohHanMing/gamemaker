@@ -4,6 +4,7 @@ delayTimer = 50;
 canAttack = false;
 y -= 30;
 
+//stunbar and attack cancel for dart atk
 if (dartAttackInMotion) {		
 	//reset dart parameters
 	dartChargeTimer = dart_movement_delay;
@@ -18,8 +19,24 @@ if (dartAttackInMotion) {
 	dartDirection = "";
 	dartAttackChargeTimer = dart_attack_delay 
 	dartAttackInMotion = false
+	
+	// increase stunbar
+	stunLevel += 1
+	if (stunLevel < stunSteps) {	
+		stunbar = instance_create_layer(x, y-50, "Instances", obj_stunbar)
+		stunbar.image_index = stunLevel
+	} else if (stunLevel == stunSteps) {
+		hspeed = 0
+		vspeed = 0
+		stunbar = instance_create_layer(x, y-50, "Instances", obj_stunbar)
+		stunbar.image_index = stunLevel
+		instance_create_layer(x, y, "Instances", obj_swatter)
+		stunLevel = 0
+		isStunned = true
+	} else {
+		stunLevel = 0
+	}
 }
-
 
 with (other) {
 	instance_destroy();
@@ -29,5 +46,5 @@ with (other) {
 }
 
 with (obj_game) {
-	__dnd_score += 15;	
+	__dnd_score += 15 ;	
 }

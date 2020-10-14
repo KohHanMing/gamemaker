@@ -1,5 +1,5 @@
 //edit static vars here (delays)
-dart_attack_delay = 120 // stun window
+dart_attack_delay = 300 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
 default_vspeed = 0.4 //only value, no direction
@@ -20,7 +20,7 @@ isRewind = false;
 rewindTimer = 0;
 
 
-
+//variables for darting
 dartTimer = irandom_range(100, 200); // timing between each dart
 dartChargeTimer = dart_movement_delay; //time it stays still before dart
 dartDirection = ""; //direction
@@ -30,5 +30,13 @@ sprite_index = spr_mosquito
 
 dartAttackChargeTimer = dart_attack_delay
 dartAttackInMotion = false
+
+//stunbar functionality
+stunLevel = 0 // tracks stun bar
+stunSteps = 1  // number of times to hit window before stun
 isStunned = false
+swatterDelay = 12 // delay for swatter animation to happen before mosquitio dies
+deadDuration = 60 // time mozzie is ded
+swatterDelayTimer = swatterDelay
+deadDurationTimer = deadDuration
 

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_stunbar",
-    "path": "sprites/spr_stunbar/spr_stunbar.yy",
+    "name": "spr_swatter",
+    "path": "sprites/spr_swatter/spr_swatter.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,8 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_stunbar","path":"objects/obj_stunbar/obj_stunbar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_stunbar","path":"objects/obj_stunbar/obj_stunbar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_swatter","path":"objects/obj_swatter/obj_swatter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_swatter","path":"objects/obj_swatter/obj_swatter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_stunbar",
+  "name": "obj_swatter",
   "tags": [],
   "resourceType": "GMObject",
 }
