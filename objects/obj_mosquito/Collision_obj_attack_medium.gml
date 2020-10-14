@@ -3,6 +3,27 @@ isDelayed = true;
 delayTimer = 45;
 canAttack = false;
 y -= 20;
+
+if (dartAttackInMotion) {		
+	//reset dart parameters
+	dartChargeTimer = dart_movement_delay;
+	dartTimer = irandom_range(300, 360);
+	dartSteps_remaining = dartSteps
+	if (dartDirection == "left") {
+		hspeed = default_hspeed * -1;
+	} else {
+		hspeed = default_hspeed;
+	}
+	vspeed = default_vspeed
+	dartDirection = "";
+	dartAttackChargeTimer = dart_attack_delay 
+	dartAttackInMotion = false
+	
+	//increase stunbar
+	
+}
+
+
 with (other) {
 	instance_destroy();
 	repeat(10) {

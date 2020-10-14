@@ -4,7 +4,7 @@ var yIsRanged = y < 400;
 var yIsMelee =  y > 400;
 
 // make divisible by 4
-var dartDist = 100;
+var dartDist = 400;
 
 
 
@@ -59,7 +59,7 @@ if (yIsRanged) {
 	} else if (canAttack) {
 		if (attackTimer > 0) {
 			attackTimer -= 1;
-		} else if (isInAttackRange) {
+		} else if (isInAttackRange && not dartAttackInMotion) { //added condition to not fire during dart
 			instance_create_layer(x,y,"Instances", obj_mosquito_attack);
 			attackTimer = irandom_range(90, 150);
 			randomize();
@@ -86,9 +86,7 @@ if (yIsRanged) {
 	} else if (!hasExecutedMelee && (point_distance(x, y, 450, 724) > 10)) {
 		//execute melee	
 		move_towards_point(450, 724, 10)
-	} else {
-		
-	}
+	} 
 }
 
 // identify possible directions for dart and select one
@@ -103,23 +101,23 @@ if (yIsRanged) {
 			var chooseDirection = irandom(1)
 			if (chooseDirection == 0) {
 				//sprite_index = spr_mosquito_left;
-				dartDestination = x - dartDist;
 				dartDirection = "left";
 			} else {
 				//sprite_index = spr_mosquito_right;
-				dartDestination = x + dartDist;
 				dartDirection = "right";
 			}		
-		} else if (x - dartDist < 200) {
+		} else if (x - dartDist < 200 && x + dartDist <= 700 ) {
 			// right dart only
 			//sprite_index = spr_mosquito_right;
-			dartDestination = x + dartDist;
 			dartDirection = "right";
-		} else {
+		} else if (x + dartDist > 700 && x - dartDist >= 200) {
 			//left dart only
 			//sprite_index = spr_mosquito_left;
-			dartDestination = x - dartDist;
 			dartDirection = "left";
+		} else {
+			dartTimer = irandom_range(60,120);
+			hspeed = default_hspeed
+			vspeed = default_vspeed
 		}
 	} 		
 }
@@ -135,20 +133,45 @@ if (dartDirection != "") {
 	} else if (dartDirection == "right" && dartSteps_remaining > 0) {
 		x += dartDist/dartSteps;
 		dartSteps_remaining -= 1;
-	} else {
-		dartChargeTimer = 60;
-		dartTimer = irandom_range(300, 360);
-		dartSteps_remaining = dartSteps
-		if (dartDirection == "left") {
-			hspeed = -3;
-		} else {
-			hspeed = 3;
-		}
-		vspeed = 0.4
-		dartDirection = ""
+	} else if (dartSteps_remaining == 0) {
+		
+		dartAttackInMotion = true;
+  		sprite_index = spr_mosquito_charge_ranged_atk;
 	}
 }
 
+
+// dart attack and reset dart variables
+if (dartAttackInMotion) {
+	hspeed = 0
+	vspeed = 0
+	if (dartAttackChargeTimer > 0) {
+		dartAttackChargeTimer -= 1
+	} else {
+		sprite_index = spr_mosquito_fire_ranged_atk;
+		instance_create_layer(x,y,"Instances", obj_mosquito_attack);
+		attackTimer = irandom_range(90, 150);
+		randomize();
+		dartChargeTimer = dart_movement_delay;
+		dartTimer = irandom_range(300, 360);
+		dartSteps_remaining = dartSteps
+		if (dartDirection == "left") {
+			hspeed = default_hspeed * -1;
+		} else {
+			hspeed = default_hspeed;
+		}
+		vspeed = default_vspeed
+		dartDirection = "";
+		dartAttackChargeTimer = dart_attack_delay 
+		dartAttackInMotion = false
+	} 
+}
+
+if (not dartAttackInMotion) {
+	sprite_index = spr_mosquito
+}
+
+ 
 //for testing
 if (y >= 800) {
 	x = xstart;
