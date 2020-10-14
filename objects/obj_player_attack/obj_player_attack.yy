@@ -3,7 +3,7 @@
     "name": "spr_attack_charging",
     "path": "sprites/spr_attack_charging/spr_attack_charging.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
