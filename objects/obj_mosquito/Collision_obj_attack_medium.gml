@@ -53,5 +53,5 @@ with (other) {
 }
 
 with (obj_game) {
-	__dnd_score += 15 ;	
+	__dnd_score += 10 ;	
 }

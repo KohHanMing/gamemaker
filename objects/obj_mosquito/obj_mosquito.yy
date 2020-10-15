@@ -26,6 +26,7 @@
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_attack_weak","path":"objects/obj_attack_weak/obj_attack_weak.yy",},"parent":{"name":"obj_mosquito","path":"objects/obj_mosquito/obj_mosquito.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_attack_medium","path":"objects/obj_attack_medium/obj_attack_medium.yy",},"parent":{"name":"obj_mosquito","path":"objects/obj_mosquito/obj_mosquito.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_attack_strong","path":"objects/obj_attack_strong/obj_attack_strong.yy",},"parent":{"name":"obj_mosquito","path":"objects/obj_mosquito/obj_mosquito.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mosquito_attack_bouncing","path":"objects/obj_mosquito_attack_bouncing/obj_mosquito_attack_bouncing.yy",},"parent":{"name":"obj_mosquito","path":"objects/obj_mosquito/obj_mosquito.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
