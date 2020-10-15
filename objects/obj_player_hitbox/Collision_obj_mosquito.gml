@@ -10,8 +10,7 @@ if (!hasRecordedMeleeDamage) {
 }
 
 with(obj_mosquito) {
-	hspeed = 0;
-	vspeed = -3;
 	hasExecutedMelee = true;
 	canAttack = false;
+	hasResetMelee = false;
 }

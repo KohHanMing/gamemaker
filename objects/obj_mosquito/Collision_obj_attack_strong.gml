@@ -1,8 +1,14 @@
 speed = 0.5;
 isDelayed = true;
-delayTimer = 50;
+
 canAttack = false;
-y -= 30;
+if (isMeleeRange) {
+	y -= 45;
+	delayTimer = 15;
+} else {
+	y -= 30;
+	delayTimer = 30;
+}
 with (other) {
 	instance_destroy();
 	repeat(10) {
