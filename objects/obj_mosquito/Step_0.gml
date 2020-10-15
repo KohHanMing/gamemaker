@@ -46,15 +46,15 @@ if (isDelayed) {
 //attack phase, movement phase double the values
 if (yIsRanged) {
 	image_blend = c_white;
-	meleeTimer = 300;
+	meleeTimer = melee_delay;
 	//check if mosquito is resetting from a melee attack
 	if (hasExecutedMelee && y < ystart) {
 		canAttack = true;
 		hasExecutedMelee = false;
 		hasResetMelee = true;
-		hspeed = 3;
-		vspeed = 0.4;
-		meleeTimer = 300;
+		hspeed = default_hspeed;
+		vspeed = default_vspeed;
+		meleeTimer = melee_delay;
 		with (obj_player_hitbox) {
 			hasRecordedMeleeDamage = false;	
 		}
@@ -62,7 +62,7 @@ if (yIsRanged) {
 		//alternates between basic and bouncing attack
 		if (attackTimer > 0) {
 			attackTimer -= 1;
-		} else if (isInAttackRange) {
+		} else if (isInAttackRange && not dartAttackInMotion) {
 			if (numBasicAttack > 0) {
 				// Shoot basic attack
 				instance_create_layer(x,y,"Instances", obj_mosquito_attack_basic);
@@ -85,11 +85,6 @@ if (yIsRanged) {
 					isFirstBouncingAngle = true;
 				}
 			}
-		} else if (isInAttackRange && not dartAttackInMotion) { //added condition to not fire during dart
-			instance_create_layer(x,y,"Instances", obj_mosquito_attack);
-			attackTimer = irandom_range(90, 150);
-			randomize();
-		} else {
 			attackTimer = irandom_range(90, 150);
 			randomize();
 		}
@@ -180,7 +175,7 @@ if (dartAttackInMotion) {
 		dartAttackChargeTimer -= 1
 	} else {
 		sprite_index = spr_mosquito_fire_ranged_atk;
-		instance_create_layer(x,y,"Instances", obj_mosquito_attack);
+		instance_create_layer(x,y,"Instances", obj_mosquito_attack_basic);
 		attackTimer = irandom_range(90, 150);
 		randomize();
 		dartChargeTimer = dart_movement_delay;
