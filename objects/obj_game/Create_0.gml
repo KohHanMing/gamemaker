@@ -13,7 +13,7 @@ isHeal = false;
 
 MAX_ACTIONS = 7;
 playerActions = 7;
-
+ 
 //Draw prompt "Need more Action Points"
 draw_set_font(Font1);
 drawActionsAlpha = 0;

@@ -1,15 +1,16 @@
-//edit static vars here 
+//edit static vars here  (STAGE 1)
 //delays
 dart_attack_delay = 180 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
 default_vspeed = 0.4 //only value, no direction
 
+hspeed = default_hspeed * -1
+vspeed = default_vspeed
+
 //melee
 melee_delay = 300;
 
-hspeed = default_hspeed * -1
-vspeed = default_vspeed
 delayTimer = 300
 isDelayed = false
 
@@ -21,6 +22,7 @@ pulseTimer = 60;
 hasExecutedMelee = false;
 isMeleeRange = false;
 hasResetMelee = true;
+isChargingMelee = false
 
 isRewind = false;
 rewindTimer = 0;
@@ -50,3 +52,8 @@ swatterDelay = 12 // delay for swatter animation to happen before mosquitio dies
 deadDuration = 60 // time mozzie is ded
 swatterDelayTimer = swatterDelay
 deadDurationTimer = deadDuration
+
+//stage status
+stage1 = true
+stage2 = false
+stage3 = false

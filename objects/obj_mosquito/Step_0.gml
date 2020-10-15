@@ -7,15 +7,28 @@ isMeleeRange = yIsMelee;
 // make divisible by 4
 var dartDist = 400;
 
+//PROGRESSION
+if (stage2) {
+dart_attack_delay = 90
+default_vspeed = 0.8
+}
 
+if (stage3) {
+dart_attack_delay = 45
+default_vspeed = 1.2
+}
 
 //Prevent mosquito from going off screen
 if (x > room_width) {
-	hspeed = -3
+	hspeed = default_hspeed * -1
 } else if (x < 0) {
-	hspeed = 3
+	hspeed = default_hspeed
 }
 
+//continuously update speed (for progression)
+if (vspeed != default_vspeed && !isChargingMelee && vspeed != 0) {
+	default_vspeed = vspeed
+}
 
 //Prevent mosquito from going off screen
 if (y < 100) {
@@ -42,6 +55,8 @@ if (isDelayed) {
 		speed = 3;
 	}
 }
+
+
 
 //attack phase, movement phase double the values
 if (yIsRanged) {
@@ -92,8 +107,9 @@ if (yIsRanged) {
 } else if (yIsMelee) {
 	if (meleeTimer > 0) {
 		//melee being charged
-		meleeTimer -= 1;
-		vspeed = 0.2;
+		isChargingMelee = true
+		meleeTimer -= 1; 
+		vspeed = 0.2
 		//Mosquito pulse red color
 		if (pulseTimer > 30) {
 			image_blend = c_red;

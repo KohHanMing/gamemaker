@@ -60,3 +60,18 @@ if (playerHealth <= 0) {
 	}
 	room_goto(rm_lose);
 }
+
+
+// PROGRESSION
+if (__dnd_score >= 200 && __dnd_score < 400) {
+	with (obj_mosquito) {
+		stage1 = false
+		stage2 = true
+	}
+} else if (__dnd_score >= 400) {
+	with (obj_mosquito) {
+		stage2 = false
+		stage3 = true
+	}
+}
+
