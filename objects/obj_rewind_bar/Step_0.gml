@@ -17,6 +17,10 @@ if (rechargeTimer <= 0 && !hasDrawnRewind) {
 		rechargeTimer = 3600;
 		hasPressedRewind = false;
 		hasDrawnRewind = false;
+		with (obj_game) {
+			col_r = 255;
+			heart_col = c_white;
+		}
 	}
 } else {
 	rechargeTimer -= 1

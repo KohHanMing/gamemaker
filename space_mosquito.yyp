@@ -27,6 +27,7 @@
     {"id":{"name":"spr_defense_hover","path":"sprites/spr_defense_hover/spr_defense_hover.yy",},"order":5,},
     {"id":{"name":"spr_attack_charging_strong","path":"sprites/spr_attack_charging_strong/spr_attack_charging_strong.yy",},"order":32,},
     {"id":{"name":"obj_mosquito_attack_bouncing","path":"objects/obj_mosquito_attack_bouncing/obj_mosquito_attack_bouncing.yy",},"order":34,},
+    {"id":{"name":"spr_stunbar_original","path":"sprites/spr_stunbar_original/spr_stunbar_original.yy",},"order":35,},
     {"id":{"name":"rm_lose","path":"rooms/rm_lose/rm_lose.yy",},"order":4,},
     {"id":{"name":"obj_win_store","path":"objects/obj_win_store/obj_win_store.yy",},"order":31,},
     {"id":{"name":"spr_attack_medium","path":"sprites/spr_attack_medium/spr_attack_medium.yy",},"order":3,},
