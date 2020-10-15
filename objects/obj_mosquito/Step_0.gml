@@ -2,6 +2,7 @@ var isInAttackRange = x > 200 && x < 700 ;
 
 var yIsRanged = y < 400;
 var yIsMelee =  y > 400;
+isMeleeRange = yIsMelee;
 
 // make divisible by 4
 var dartDist = 100;
@@ -45,22 +46,45 @@ if (isDelayed) {
 //attack phase, movement phase double the values
 if (yIsRanged) {
 	image_blend = c_white;
-	meleeTimer = 600;
+	meleeTimer = 300;
 	//check if mosquito is resetting from a melee attack
 	if (hasExecutedMelee && y < ystart) {
 		canAttack = true;
 		hasExecutedMelee = false;
+		hasResetMelee = true;
 		hspeed = 3;
 		vspeed = 0.4;
-		meleeTimer = 600;
+		meleeTimer = 300;
 		with (obj_player_hitbox) {
 			hasRecordedMeleeDamage = false;	
 		}
 	} else if (canAttack) {
+		//alternates between basic and bouncing attack
 		if (attackTimer > 0) {
 			attackTimer -= 1;
 		} else if (isInAttackRange) {
-			instance_create_layer(x,y,"Instances", obj_mosquito_attack);
+			if (numBasicAttack > 0) {
+				// Shoot basic attack
+				instance_create_layer(x,y,"Instances", obj_mosquito_attack_basic);
+				numBasicAttack -= 1;
+			} else {
+				// Otherwise shoot bouncing
+				var bouncingAttack = instance_create_layer(x,y,"Instances", obj_mosquito_attack_bouncing);
+				bouncingAttack.direction = bouncingAttackAngle;
+				bouncingAttack.image_angle = bouncingAttackAngle;
+				numBasicAttack = 1;
+				if (isFirstBouncingAngle) {
+					bouncingAttackAngle = 270;
+					isFirstBouncingAngle = false;
+					isSecondBouncingAngle = true;
+				} else if (isSecondBouncingAngle) {
+					bouncingAttackAngle = 210;
+					isSecondBouncingAngle = false;
+				} else {
+					bouncingAttackAngle = 330;
+					isFirstBouncingAngle = true;
+				}
+			}
 			attackTimer = irandom_range(90, 150);
 			randomize();
 		} else {
@@ -89,6 +113,11 @@ if (yIsRanged) {
 	} else {
 		
 	}
+}
+
+// if melee has not been reset, keep moving to reset point
+if (!hasResetMelee) {
+		move_towards_point(450, ystart, 3);
 }
 
 // identify possible directions for dart and select one

@@ -6,9 +6,11 @@ isDelayed = false
 attackTimer = 60;
 canAttack = true;
 
-meleeTimer = 600;
+meleeTimer = 300;
 pulseTimer = 60;
 hasExecutedMelee = false;
+isMeleeRange = false;
+hasResetMelee = true;
 
 isRewind = false;
 rewindTimer = 0;
@@ -21,3 +23,8 @@ dartDestination = 0; //x-location to move towards
 dartSteps = 8; //how fast the animation is
 dartSteps_remaining = dartSteps; // counter for mozzie dart movement
 sprite_index = spr_mosquito
+
+numBasicAttack = 1;
+bouncingAttackAngle = 330;
+isFirstBouncingAngle = true;
+isSecondBouncingAngle = false;

@@ -23,8 +23,9 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_defense_bar","path":"objects/obj_defense_bar/obj_defense_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_defense_bar","path":"objects/obj_defense_bar/obj_defense_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mosquito_attack","path":"objects/obj_mosquito_attack/obj_mosquito_attack.yy",},"parent":{"name":"obj_defense_bar","path":"objects/obj_defense_bar/obj_defense_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mosquito_attack_basic","path":"objects/obj_mosquito_attack_basic/obj_mosquito_attack_basic.yy",},"parent":{"name":"obj_defense_bar","path":"objects/obj_defense_bar/obj_defense_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":5,"eventType":6,"collisionObjectId":null,"parent":{"name":"obj_defense_bar","path":"objects/obj_defense_bar/obj_defense_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mosquito_attack_bouncing","path":"objects/obj_mosquito_attack_bouncing/obj_mosquito_attack_bouncing.yy",},"parent":{"name":"obj_defense_bar","path":"objects/obj_defense_bar/obj_defense_bar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
