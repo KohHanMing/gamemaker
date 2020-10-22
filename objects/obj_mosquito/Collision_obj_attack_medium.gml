@@ -1,13 +1,22 @@
 speed = 0.5;
 isDelayed = true;
-
 canAttack = false;
-if (isMeleeRange) {
-	y -= 30;
-	delayTimer = 10;
-} else {
-	y -= 20
+
+//If it is stage 1, there is no knockback
+var stage = 1;
+with (obj_stage_handler) {
+	stage = currentStage;
+}
+if (stage == 1) {
 	delayTimer = 20;
+} else {
+	if (isMeleeRange) {
+		y -= 30;
+		delayTimer = 10;
+	} else {
+		y -= 20
+		delayTimer = 20;
+	}
 }
 
 //stunbar and attack cancel for dart atk

@@ -16,6 +16,7 @@
     {"id":{"name":"obj_stage_complete","path":"objects/obj_stage_complete/obj_stage_complete.yy",},"order":37,},
     {"id":{"name":"obj_player_attack","path":"objects/obj_player_attack/obj_player_attack.yy",},"order":22,},
     {"id":{"name":"spr_attack_weak","path":"sprites/spr_attack_weak/spr_attack_weak.yy",},"order":14,},
+    {"id":{"name":"obj_milestone_back","path":"objects/obj_milestone_back/obj_milestone_back.yy",},"order":39,},
     {"id":{"name":"spr_player_hitbox","path":"sprites/spr_player_hitbox/spr_player_hitbox.yy",},"order":7,},
     {"id":{"name":"spr_action","path":"sprites/spr_action/spr_action.yy",},"order":8,},
     {"id":{"name":"obj_lose_store","path":"objects/obj_lose_store/obj_lose_store.yy",},"order":32,},
