@@ -67,6 +67,9 @@ if (stage == 2) {
 	mosquito_fire_ranged_atk = spr_mosquito_fire_ranged_atk_blue
 	mosquito_drill = spr_mosquito_drill_blue
 	mosquito_spinning = spr_mosquito_spinning_blue
+	if (sprite_index == spr_mosquito_purple) {
+    sprite_index = spr_mosquito_blue
+	}
 }
 
 if (stage == 3) {
