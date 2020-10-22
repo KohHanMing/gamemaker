@@ -5,7 +5,7 @@ image_blend = col;
 image_xscale = 0.01;
 
 hasDrawnRewind = false;
-rechargeTimer = 360;
+rechargeTimer = 3600;
 
 hasPressedRewind = false;
 rewindTimer = 0;

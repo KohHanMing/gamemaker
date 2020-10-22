@@ -4,7 +4,6 @@ with (other) {
 }
 
 with (obj_game) {
-	__dnd_score += 5;
 	playerActions +=1;
 }
 

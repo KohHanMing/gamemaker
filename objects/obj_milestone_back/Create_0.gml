@@ -6,4 +6,5 @@ COLOR_RED = c_red;
 
 x = xstart - 8;
 image_xscale = 1;
-image_blend = COLOR_PURPLE;
+image_alpha = 1;
+image_blend = COLOR_BLUE
