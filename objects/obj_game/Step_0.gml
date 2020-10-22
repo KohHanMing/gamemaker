@@ -47,11 +47,23 @@ if (playerHealth > MAX_HEALTH) {
 	playerHealth = MAX_HEALTH;
 }
 
-if (gameScore >= 500) {
-	with (obj_win_store) {
-		finalScore = gameScore;
+var maxScore = 0;
+var stage = 1;
+
+with (obj_stage_handler) {
+	maxScore = currentMaxPoints;
+	stage = currentStage;
+}
+
+if (gameScore >= maxScore) {
+	if (stage == 5) {
+		with (obj_win_store) {
+			finalScore = gameScore;
+		}
+		room_goto(rm_win);
+	} else {
+		room_goto(rm_stage_complete);
 	}
-	room_goto(rm_win);
 }
 
 if (playerHealth <= 0) {

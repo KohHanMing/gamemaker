@@ -43,9 +43,9 @@ if (isDelayed) {
 	}
 }
 
-//attack phase, movement phase double the values
+//attack phase
 if (yIsRanged) {
-	image_blend = c_white;
+
 	meleeTimer = melee_delay;
 	//check if mosquito is resetting from a melee attack
 	if (hasExecutedMelee && y < ystart) {
@@ -55,12 +55,13 @@ if (yIsRanged) {
 		hspeed = default_hspeed;
 		vspeed = default_vspeed;
 		meleeTimer = melee_delay;
+		image_blend = c_white;
 		with (obj_player_hitbox) {
 			hasRecordedMeleeDamage = false;	
 		}
 	} else if (canAttack) {
 		//alternates between basic and bouncing attack
-		if (attackTimer > 0) {
+		if (attackTimer > 0 && not dartAttackInMotion) {
 			attackTimer -= 1;
 		} else if (isInAttackRange && not dartAttackInMotion) {
 			if (numBasicAttack > 0) {
@@ -151,6 +152,21 @@ if (yIsRanged) {
 
 // tick down timer for pre-dart visual cue and execute dart
 if (dartDirection != "") {
+	if (!hasCreatedDartCue) {
+		// Ensure mosquito does not fire while executing dart
+		canAttack = false;
+		var dartCue = instance_create_layer(x,y,"Instances", obj_dart);
+		hasCreatedDartCue = true;
+		if (dartDirection == "left") {
+			dartCue.x = x - 32;
+			dartCue.sprite_index = spr_dart_left;
+		} else if (dartDirection == "right") {
+			dartCue.x = x + 32;
+			dartCue.sprite_index = spr_dart_right;
+		} else {
+			
+		}
+	}
 	if (dartChargeTimer > 0) {
 	dartChargeTimer -= 1;
 	} else if (dartDirection == "left" && dartSteps_remaining > 0) {
@@ -173,12 +189,23 @@ if (dartAttackInMotion) {
 	vspeed = 0
 	if (dartAttackChargeTimer > 0) {
 		dartAttackChargeTimer -= 1
+		if (dartPulseTimer > 30) {
+			sprite_index = spr_mosquito_charge_ranged_atk;
+			dartPulseTimer -= 1;
+		} else if (dartPulseTimer > 0 && dartPulseTimer <= 30) {
+			sprite_index = spr_mosquito_charge_ranged_atk_green;
+			dartPulseTimer -= 1;
+		} else {
+			dartPulseTimer = 60;
+		}
 	} else {
 		sprite_index = spr_mosquito_fire_ranged_atk;
 		instance_create_layer(x,y,"Instances", obj_mosquito_attack_basic);
 		attackTimer = irandom_range(90, 150);
 		randomize();
+		canAttack = true;
 		dartChargeTimer = dart_movement_delay;
+		hasCreatedDartCue = false;
 		dartTimer = irandom_range(300, 360);
 		dartSteps_remaining = dartSteps
 		if (dartDirection == "left") {
