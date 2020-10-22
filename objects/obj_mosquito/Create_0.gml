@@ -3,7 +3,7 @@
 dart_attack_delay = 180 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
-default_vspeed = 0.4 //only value, no direction
+default_vspeed = 1 //only value, no direction
 
 //for melee
 melee_delay = 300;
@@ -23,6 +23,12 @@ hasExecutedMelee = false;
 isMeleeRange = false;
 hasResetMelee = true;
 
+//new melee vars
+mosquitoIsChargingDrill = false
+mosquitoSpinBuildupDuration = 30
+mosquitoSpinTimer = mosquitoSpinBuildupDuration
+mosquitoIsDrill = false
+
 isRewind = false;
 rewindTimer = 0;
 
@@ -32,7 +38,7 @@ dartChargeTimer = dart_movement_delay; //time it stays still before dart
 dartDirection = ""; //direction
 dartSteps = 8; //how fast the animation is
 dartSteps_remaining = dartSteps; // counter for mozzie dart movement
-sprite_index = spr_mosquito
+sprite_index = spr_mosquito_purple
 dartAttackChargeTimer = dart_attack_delay
 dartAttackInMotion = false
 dartPulseTimer = 60;
@@ -54,3 +60,15 @@ swatterDelay = 12 // delay for swatter animation to happen before mosquitio dies
 deadDuration = 60 // time mozzie is ded
 swatterDelayTimer = swatterDelay
 deadDurationTimer = deadDuration
+
+
+
+//SPRITES
+mosquito_normal = spr_mosquito_purple
+mosquito_charge_ranged_atk = spr_mosquito_charge_ranged_atk_purple
+mosquito_fire_ranged_atk = spr_mosquito_fire_ranged_atk_purple
+mosquito_drill = spr_mosquito_drill_red
+mosquito_spinning = spr_mosquito_spinning_red
+mosquito_dead = spr_mosquito_dead_red
+mosquito_dizzy = spr_mosquito_dizzy_red
+
