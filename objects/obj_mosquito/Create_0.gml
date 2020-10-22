@@ -1,11 +1,11 @@
 //edit static vars here 
-//delays
+//for delays
 dart_attack_delay = 180 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
 default_vspeed = 0.4 //only value, no direction
 
-//melee
+//for melee
 melee_delay = 300;
 
 hspeed = default_hspeed * -1
@@ -16,6 +16,7 @@ isDelayed = false
 attackTimer = 60;
 canAttack = true;
 
+// variables for melee
 meleeTimer = melee_delay;
 pulseTimer = 60;
 hasExecutedMelee = false;
@@ -34,6 +35,9 @@ dartSteps_remaining = dartSteps; // counter for mozzie dart movement
 sprite_index = spr_mosquito
 dartAttackChargeTimer = dart_attack_delay
 dartAttackInMotion = false
+dartPulseTimer = 60;
+hasCreatedDartCue = false;
+
 
 //variables for bouncing attack
 numBasicAttack = 1;

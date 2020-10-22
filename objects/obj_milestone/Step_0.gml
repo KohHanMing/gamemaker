@@ -1,9 +1,14 @@
+var stageMaxScore = 0;
 var amtToScale = 0;
 
-with (obj_game) {
-	amtToScale = __dnd_score / 500;
+with (obj_stage_handler) {
+	stageMaxScore = currentMaxPoints;	
 }
 
-if (amtToScale != 0) {
-	image_xscale = amtToScale;
+with (obj_game) {
+	amtToScale = __dnd_score / stageMaxScore;
+}
+
+if (amtToScale != 1) {
+	image_xscale = 1 - amtToScale;
 }
