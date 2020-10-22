@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_mosquito",
-    "path": "sprites/spr_mosquito/spr_mosquito.yy",
+    "name": "spr_mosquito_red",
+    "path": "sprites/spr_mosquito_red/spr_mosquito_red.yy",
   },
   "solid": false,
   "visible": true,
