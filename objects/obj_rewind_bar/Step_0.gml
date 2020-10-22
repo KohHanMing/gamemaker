@@ -17,13 +17,13 @@ if (stage == 1) {
 		// if the rewind has been pressed
 		if (hasPressedRewind && rewindTimer > 0) {
 			image_blend = make_color_rgb(255, 255, 255);
-			image_xscale -= 0.0033;
+			image_yscale -= 0.0033;
 			rewindTimer -= 1;
 		} else if (!hasPressedRewind) {
 		
 		} else {
 			//Reset after pressing
-			image_xscale = 0.01;
+			image_yscale = 0.01;
 			rechargeTimer = 3600;
 			hasPressedRewind = false;
 			hasDrawnRewind = false;
@@ -37,6 +37,6 @@ if (stage == 1) {
 		col_r -= 2
 
 		image_blend = make_color_rgb(col_r, 255, 255)
-		image_xscale += 0.000275
+		image_yscale += 0.000275
 	}
 }

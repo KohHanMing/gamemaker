@@ -11,13 +11,14 @@ if (stage == 1) {
 
 	} else {
 		if (rechargeTimer <= 0) {
-			image_xscale = 1;
+			image_yscale = 1;
 			hasPressedRewind = true;
 			rewindTimer = 300;
 
 			with (obj_mosquito) {
 				isRewind = true;
 				rewindTimer = 300;
+				canAttack = false;
 				speed = 0.5;
 			}
 	
