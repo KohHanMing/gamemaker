@@ -3,7 +3,7 @@
 dart_attack_delay = 180 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
-default_vspeed = 1 //only value, no direction
+default_vspeed = 0.4 //only value, no direction
 
 //for melee
 melee_delay = 300;
