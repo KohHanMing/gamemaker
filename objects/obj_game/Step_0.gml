@@ -1,4 +1,4 @@
-var gameScore = __dnd_score;
+ var gameScore = __dnd_score;
 
 if (drawActionsTimer > 0) {
 	drawActionsTimer -= 1;

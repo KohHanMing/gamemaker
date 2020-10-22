@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"83db5852-1f76-4249-835c-18d905b0fbdd","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"83db5852-1f76-4249-835c-18d905b0fbdd","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":{"name":"0b71b873-c6fb-4452-b766-5628f69ad14d","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_mosquito_charge_ranged_atk_green","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"83db5852-1f76-4249-835c-18d905b0fbdd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"90ef77ca-f679-49eb-bde4-53dc22b45c85","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"90ef77ca-f679-49eb-bde4-53dc22b45c85","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":{"name":"0b71b873-c6fb-4452-b766-5628f69ad14d","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_mosquito_charge_ranged_atk_green","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"90ef77ca-f679-49eb-bde4-53dc22b45c85","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8cb60e74-4181-4a28-94cb-7ebb62604259","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8cb60e74-4181-4a28-94cb-7ebb62604259","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":{"name":"89f3218a-ed43-4215-99e6-a0c0c4428d26","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_mosquito_charge_ranged_atk_green","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"8cb60e74-4181-4a28-94cb-7ebb62604259","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bda09416-c7ba-4da2-903a-ed072b915770","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bda09416-c7ba-4da2-903a-ed072b915770","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"LayerId":{"name":"89f3218a-ed43-4215-99e6-a0c0c4428d26","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_mosquito_charge_ranged_atk_green","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","name":"bda09416-c7ba-4da2-903a-ed072b915770","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_mosquito_charge_ranged_atk_green","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"77ec3ab3-203e-4840-80eb-5b83733dce66","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"83db5852-1f76-4249-835c-18d905b0fbdd","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"55c90bbb-d8a3-4974-841f-fa8d85fa1acf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"90ef77ca-f679-49eb-bde4-53dc22b45c85","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"659ad923-2d7f-44cd-a892-1e2f4fb49e22","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8cb60e74-4181-4a28-94cb-7ebb62604259","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"62cc49b0-d023-4f0a-942f-5d0c335d440c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bda09416-c7ba-4da2-903a-ed072b915770","path":"sprites/spr_mosquito_charge_ranged_atk_green/spr_mosquito_charge_ranged_atk_green.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,11 +69,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0b71b873-c6fb-4452-b766-5628f69ad14d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"89f3218a-ed43-4215-99e6-a0c0c4428d26","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "green",
+    "path": "folders/Sprites/green.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_mosquito_charge_ranged_atk_green",
