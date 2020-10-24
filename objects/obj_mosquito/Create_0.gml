@@ -1,17 +1,21 @@
 //edit static vars here 
 //for delays
-dart_attack_delay = 180 // stun window
+dart_attack_delay = 160 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
 default_vspeed = 0.4 //only value, no direction
 
 //for melee
 melee_delay = 300;
+default_h_accel = 0.001
+h_accel = default_h_accel
+momentum_gained = 0
 
 hspeed = default_hspeed * -1
 vspeed = default_vspeed
 delayTimer = 300
 isDelayed = false
+postDelay = false
 
 attackTimer = 60;
 canAttack = true;
@@ -25,7 +29,7 @@ hasResetMelee = true;
 
 //new melee vars
 mosquitoIsChargingDrill = false
-mosquitoSpinBuildupDuration = 30
+mosquitoSpinBuildupDuration = 45
 mosquitoSpinTimer = mosquitoSpinBuildupDuration
 mosquitoIsDrill = false
 

@@ -9,11 +9,10 @@ var dartDist = 400;
 
 
 //Prevent mosquito from going off screen
-if (x > room_width) {
-	hspeed = -3
-} else if (x < 0) {
-	hspeed = 3
+if (x > room_width || x < 0) {
+	hspeed = hspeed * -1
 }
+	
 
 
 //Prevent mosquito from going off screen
@@ -28,6 +27,7 @@ if (isDelayed) {
 	} else {
 		isDelayed = false;
 		canAttack = true;
+		postDelay = true
 		speed = 3;
 	}
 } else if (isRewind) {
@@ -128,9 +128,15 @@ if (stage == 1) {
 			mosquitoSpinTimer = mosquitoSpinBuildupDuration
 			mosquitoIsDrill = false
 			mosquitoIsChargingDrill = false
-			hspeed = default_hspeed
+			if (hspeed < 0) {
+				hspeed = default_hspeed * -1
+			} else {
+				hspeed = default_hspeed
+			}
 			vspeed = default_vspeed
 			sprite_index = mosquito_normal
+			h_accel = default_h_accel
+			momentum_gained = 0
 		}
 		
 		//check if mosquito is resetting from a melee attack
@@ -160,7 +166,6 @@ if (stage == 1) {
 			if (not mosquitoIsChargingDrill && not mosquitoIsDrill) {
 				mosquitoIsChargingDrill = true
 				sprite_index = mosquito_spinning
-				vspeed = vspeed/2
 			}
 			
 			//change mozzie drill sprite midway
@@ -176,12 +181,28 @@ if (stage == 1) {
 			
 			//increase hspeed of drill the longer it stays in the zone
 			if (mosquitoIsDrill) {
-				if (hspeed < 8) {
-					hspeed += 0.00001
+				h_accel += 0.00001
+				momentum_gained += h_accel
+				vspeed = default_vspeed * 0.75
+				if (postDelay) {
+					postDelay = false
+					if (hspeed < 0  && hspeed > -6) {
+						hspeed = (default_hspeed*-1) - momentum_gained
+					} else if ( hspeed > 0 && hspeed < 6) {
+						hspeed = default_hspeed + momentum_gained
+					}
+				} else {
+					if (hspeed < 0  && hspeed > -6) {
+						hspeed -= h_accel
+					} else if ( hspeed > 0 && hspeed < 6) {
+						hspeed += h_accel
+					}
 				}
 			}
 			//small range to account for decimal vspeed
-			if (y >= 550 -32 && y <= 551 - 32) {
+			if (y >= 550 -30) {
+				h_accel = 0
+				hspeed = default_hspeed
 				if (x < 200) {
 					move_towards_point(200, 724, 10)
 				} else if (x > 700) {
@@ -205,9 +226,15 @@ if (stage == 1) {
 			mosquitoSpinTimer = mosquitoSpinBuildupDuration
 			mosquitoIsDrill = false
 			mosquitoIsChargingDrill = false
-			hspeed = default_hspeed
+			if (hspeed < 0) {
+				hspeed = default_hspeed * -1
+			} else {
+				hspeed = default_hspeed
+			}
 			vspeed = default_vspeed
 			sprite_index = mosquito_normal
+			h_accel = default_h_accel
+			momentum_gained = 0
 		}
 		
 		//check if mosquito is resetting from a melee attack
@@ -254,9 +281,11 @@ if (stage == 1) {
 				if (stage == 5) {
 					attackTimer = irandom_range(67, 112);
 					randomize();
+					default_vspeed = 0.6
 				} else {
 					attackTimer = irandom_range(90, 150);
 					randomize();
+					default_vspeed = 0.4
 				}
 			}
 		}
@@ -265,7 +294,6 @@ if (stage == 1) {
 			if (not mosquitoIsChargingDrill && not mosquitoIsDrill) {
 				mosquitoIsChargingDrill = true
 				sprite_index = mosquito_spinning
-				vspeed = vspeed/2
 			}
 	
 			if (mosquitoIsChargingDrill) {
@@ -277,14 +305,34 @@ if (stage == 1) {
 					mosquitoIsDrill = true
 				}
 			}
-	
+			
+			// mosquito hspeed in drill form is based off acceleration of
+			// h_accel px/s^2. Reduced vspeed to 3/4 of normal to give player leeway
+			// addded postDelay statement to restore prev velocity after being hit
+			// momentum gained stores the total velocity increased
 			if (mosquitoIsDrill) {
-				if (hspeed < 8) {
-					hspeed += 0.00001
+				h_accel += 0.00001
+				momentum_gained += h_accel
+				vspeed = default_vspeed * 0.75
+				if (postDelay) {
+					postDelay = false
+					if (hspeed < 0  && hspeed > -6) {
+						hspeed = (default_hspeed*-1) - momentum_gained
+					} else if ( hspeed > 0 && hspeed < 6) {
+						hspeed = default_hspeed + momentum_gained
+					}
+				} else {
+					if (hspeed < 0  && hspeed > -6) {
+						hspeed -= h_accel
+					} else if ( hspeed > 0 && hspeed < 6) {
+						hspeed += h_accel
+					}
 				}
 			}
 			//small range to account for decimal vspeed
-			if (y >= 550 -32 && y <= 551 - 32) {
+			if (y >= 550 -30) {
+				h_accel = 0
+				hspeed = default_hspeed
 				if (x < 200) {
 					move_towards_point(200, 724, 10)
 				} else if (x > 700) {
@@ -292,7 +340,7 @@ if (stage == 1) {
 				} else {
 					move_towards_point(x, 724, 10)
 				}
-			}	
+			}		
 		}
 	}
 
@@ -411,7 +459,7 @@ if (stage == 3 || stage == 4 || stage == 5) {
 			
 				//Stun window is smaller in stage 5
 				if (stage == 5) {
-					dartAttackChargeTimer = 120; 
+					dartAttackChargeTimer = 110; 
 				} else {
 					dartAttackChargeTimer = dart_attack_delay 
 				}
