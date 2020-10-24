@@ -14,6 +14,8 @@ with(obj_mosquito) {
 	canAttack = false;
 	hasResetMelee = false;
 	mosquitoIsDrill = false
+	h_accel = default_h_accel
+	momentum_gained = 0
 	mosquitoSpinTimer = mosquitoSpinBuildupDuration
 	sprite_index = mosquito_normal
 	hspeed = default_hspeed

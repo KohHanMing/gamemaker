@@ -28,6 +28,8 @@ if (stage == 1) {
 				heartTimer = 30;
 				isHeal = true;
 			}
+			
+			instance_create_layer(0, 0, "bg", obj_rewind_bg)
 
 			repeat(100) {
 				instance_create_layer(floor(random_range(50, 850)), floor(random_range(50, 850)), "Instances", obj_rewind_debris)	

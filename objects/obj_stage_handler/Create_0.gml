@@ -1,2 +1,2 @@
-currentStage = 1;
+currentStage = 2;
 currentMaxPoints = 200;
