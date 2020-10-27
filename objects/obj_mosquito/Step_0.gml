@@ -279,7 +279,7 @@ if (stage == 1) {
 				
 				//Attacks are 50% faster for stage 5
 				if (stage == 5) {
-					attackTimer = irandom_range(67, 112);
+					attackTimer = irandom_range(60, 120);
 					randomize();
 					default_vspeed = 0.6
 				} else {
@@ -459,7 +459,7 @@ if (stage == 3 || stage == 4 || stage == 5) {
 			
 				//Stun window is smaller in stage 5
 				if (stage == 5) {
-					dartAttackChargeTimer = 110; 
+					dartAttackChargeTimer = 120; 
 				} else {
 					dartAttackChargeTimer = dart_attack_delay 
 				}
