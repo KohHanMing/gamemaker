@@ -1,6 +1,6 @@
 //edit static vars here 
 //for delays
-dart_attack_delay = 160 // stun window
+dart_attack_delay = 180 // stun window
 dart_movement_delay = 60 // 
 default_hspeed = 3 //only value, no direction
 default_vspeed = 0.4 //only value, no direction
