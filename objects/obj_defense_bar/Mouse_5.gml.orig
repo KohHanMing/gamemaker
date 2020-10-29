@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+if (global.isPaused) {
+	
+} else {
+	instance_destroy();
+	with (obj_game) {
+		playerActions += 1;
+	}
+
+	with (durationBar) {
+		instance_destroy();
+	}
+=======
+instance_destroy();
+with (obj_game) {
+	playerActions += 1;
+}
+
+nearest = instance_nearest(x,y+24,obj_defense_duration)
+with (nearest) {
+	instance_destroy()
+>>>>>>> 06395ac7c3518d8df9f2a7d2444ebcb862570f4d
+}
