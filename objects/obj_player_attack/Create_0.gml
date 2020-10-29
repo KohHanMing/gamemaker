@@ -1,2 +1,2 @@
-timer = 60;
-sprite_index = spr_attack_pod;
+ timer = 60;
+sprite_index = spr_attack_charging;
