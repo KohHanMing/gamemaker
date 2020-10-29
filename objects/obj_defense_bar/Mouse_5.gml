@@ -9,4 +9,9 @@ if (global.isPaused) {
 	with (durationBar) {
 		instance_destroy();
 	}
+
+	nearest = instance_nearest(x,y+24,obj_defense_duration);
+	with (nearest) {
+		instance_destroy()
+	}
 }
