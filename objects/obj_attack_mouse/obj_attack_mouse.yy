@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_attack_charging",
-    "path": "sprites/spr_attack_charging/spr_attack_charging.yy",
+    "name": "spr_attack_weak",
+    "path": "sprites/spr_attack_weak/spr_attack_weak.yy",
   },
   "solid": false,
   "visible": true,

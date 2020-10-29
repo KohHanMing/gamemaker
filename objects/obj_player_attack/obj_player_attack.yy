@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_attack_charging",
-    "path": "sprites/spr_attack_charging/spr_attack_charging.yy",
+    "name": "spr_attack_pod",
+    "path": "sprites/spr_attack_pod/spr_attack_pod.yy",
   },
   "solid": true,
   "visible": true,
