@@ -76,3 +76,6 @@ mosquito_spinning = spr_mosquito_spinning_red
 mosquito_dead = spr_mosquito_dead_red
 mosquito_dizzy = spr_mosquito_dizzy_red
 
+//vars for pause
+pauseHSpeed = 0;
+pauseVSpeed = 0;

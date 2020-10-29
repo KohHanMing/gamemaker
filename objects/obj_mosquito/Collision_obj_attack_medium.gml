@@ -34,6 +34,7 @@ if (dartAttackInMotion) {
 	dartDirection = ""
 	dartAttackChargeTimer = dart_attack_delay 
 	dartAttackInMotion = false
+	hasCreatedDartCue = false;
 	
 	// increase stunbar
 	stunLevel += 1

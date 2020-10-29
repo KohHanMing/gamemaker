@@ -1,17 +1,21 @@
-if (timer <= 0 && sprite_index == spr_attack_charging) {
-	sprite_index = spr_attack_weak;
-	timer = 180;
-} else if (timer <= 0 && sprite_index == spr_attack_weak) {
-	sprite_index = spr_attack_medium;
-	timer = 360;
-} else if (timer <= 0 && sprite_index == spr_attack_medium) {
-	sprite_index = spr_attack_strong;
-} else if (sprite_index == spr_attack_strong) {
-
+if (global.isPaused) {
+	
 } else {
-	timer -= 1;
-}
+	if (timer <= 0 && sprite_index == spr_attack_pod) {
+		sprite_index = spr_attack_charging_weak;
+		timer = 180;
+	} else if (timer <= 0 && sprite_index == spr_attack_charging_weak) {
+		sprite_index = spr_attack_charging_medium;
+		timer = 360;
+	} else if (timer <= 0 && sprite_index == spr_attack_charging_medium) {
+		sprite_index = spr_attack_charging_strong;
+	} else if (sprite_index == spr_attack_charging_strong) {
 
-if (y < 0) {
-	instance_destroy();
+	} else {
+		timer -= 1;
+	}
+
+	if (y < 0) {
+		instance_destroy();
+	}
 }
