@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_attack_weak",
-    "path": "sprites/spr_attack_weak/spr_attack_weak.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

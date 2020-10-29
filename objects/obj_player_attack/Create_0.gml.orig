@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+timer = 60;
+sprite_index = spr_attack_pod;
+=======
+ timer = 60;
+sprite_index = spr_attack_charging;
+>>>>>>> 06395ac7c3518d8df9f2a7d2444ebcb862570f4d
