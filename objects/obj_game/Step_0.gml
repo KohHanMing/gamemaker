@@ -1,5 +1,9 @@
 var gameScore = __dnd_score;
 
+with (obj_stage_handler) {
+	var stage = currentStage;
+}
+
 //Show pause menu when paused
 if (global.isPaused) {
 	if point_in_rectangle(mouse_x, mouse_y, room_width/2 - resumeTextWidth/2, room_height/2 + 80 - resumeTextHeight/2, room_width/2 + resumeTextWidth/2, room_height/2 + 80 + resumeTextHeight/2)
@@ -14,6 +18,8 @@ if (global.isPaused) {
 			resumeTextLargeAlpha = 0;
 			menuTextSmallAlpha = 0;
 			menuTextLargeAlpha = 0;
+			helpTextSmallAlpha = 0;
+			helpTextLargeAlpha = 0;
 			with (obj_mosquito) {
 				hspeed = pauseHSpeed;
 				vspeed = pauseVSpeed;
@@ -24,18 +30,45 @@ if (global.isPaused) {
 		resumeTextLargeAlpha = 0;
 	}
 	
-	if point_in_rectangle(mouse_x, mouse_y, room_width/2 - menuTextWidth/2, room_height/2 + 160 - menuTextHeight/2, room_width/2 + menuTextWidth/2, room_height/2 + 160 + menuTextHeight/2)
+	if point_in_rectangle(mouse_x, mouse_y, room_width/2 - menuTextWidth/2, room_height/2 + 130 - menuTextHeight/2, room_width/2 + menuTextWidth/2, room_height/2 + 130 + menuTextHeight/2)
 	{
 	    menuTextSmallAlpha = 0;
 		menuTextLargeAlpha = 1;
 		if (mouse_check_button_pressed(mb_left)) {
+			with (obj_stage_handler) {
+				currentStage = 1
+			}
 			room_goto(rm_menu)
 		}
 	} else {
 		menuTextSmallAlpha = 1;
 		menuTextLargeAlpha = 0;
 	}
+	
+	if point_in_rectangle(mouse_x, mouse_y, room_width/2 - helpTextWidth/2, room_height/2 + 180 - helpTextHeight/2, room_width/2 + helpTextWidth/2, room_height/2 + 180 + helpTextHeight/2)
+	{
+	    helpTextSmallAlpha = 0;
+		helpTextLargeAlpha = 1;
+		if (mouse_check_button_pressed(mb_left)) {
+			if (stage == 1) {
+				room_goto(rm_stage_1_instruction_1)
+			} else if (stage == 2) {
+				room_goto(rm_stage_2_instruction_1)
+			} else if (stage == 3) {
+				room_goto(rm_stage_3_instruction_1)
+			} else if (stage == 4) {
+				room_goto(rm_stage_4_instruction_1)
+			} else if (stage == 5) {
+				room_goto(rm_stage_5_instruction)
+			}
+		}
+	} else {
+		helpTextSmallAlpha = 1;
+		helpTextLargeAlpha = 0;
+	}
+	
 } else {
+	helpTextSmallAlpha = 0;
 	menuTextSmallAlpha = 0;
 	if (drawActionsTimer > 0) {
 		drawActionsTimer -= 1;
@@ -122,6 +155,9 @@ if (global.isPaused) {
 	}
 
 	if (gameScore >= maxScore) {
+		with (obj_stage_handler) {
+			currentStage += 1
+		} 
 		if (stage == 1) {
 			room_goto(rm_stage_complete_1);
 		} else if (stage == 2) {

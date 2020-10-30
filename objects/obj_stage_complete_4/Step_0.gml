@@ -35,7 +35,7 @@ if point_in_rectangle(mouse_x, mouse_y, xForNext - nextTextWidth/2, yForNext - n
 	nextWhiteAlpha = 1;
 	if (mouse_check_button_pressed(mb_left)) {
 		//Go to next tut screen. Duplicate this room and change the room as needed
-		//room_goto(NEXT ROOM);
+		room_goto(rm_stage_5_instruction);
 	}
 } else {
 	nextOrangeAlpha = 1;
@@ -49,7 +49,7 @@ if point_in_rectangle(mouse_x, mouse_y, xForBack - backTextWidth/2, yForBack - b
 	backWhiteAlpha = 1;
 	if (mouse_check_button_pressed(mb_left)) {
 		//Go to previous tut screen. Duplicate this room and change the room as needed
-		//room_goto(PREVIOUS ROOM);
+		//room_goto(rm_stage_1_instruction);
 	}
 } else {
 	backOrangeAlpha = 1;
