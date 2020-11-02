@@ -1,14 +1,3 @@
-if (global.isPaused) {
-	
-} else {
-	if (uptime > 0) {
-		uptime -= 1;
-	} else if (image_alpha > 0) {
-		image_alpha -= 0.05;
-	} else {
-		instance_destroy()
-	}
-
-	x = obj_mosquito.x;
-	y = obj_mosquito.y - 50;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:061c4e96f147f656946e5951baa7522bdf3f82e745b980770ab088ecd8d6f6d9
+size 205

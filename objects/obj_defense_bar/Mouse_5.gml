@@ -1,17 +1,3 @@
-if (global.isPaused) {
-	
-} else {
-	instance_destroy();
-	with (obj_game) {
-		playerActions += 1;
-	}
-
-	with (durationBar) {
-		instance_destroy();
-	}
-
-	nearest = instance_nearest(x,y+24,obj_defense_duration);
-	with (nearest) {
-		instance_destroy()
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f095fc9cc0d7fba218a6ef7fcc6f388efc79fdd556aecdf01d6c073838f9f6e
+size 250

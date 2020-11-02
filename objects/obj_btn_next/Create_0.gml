@@ -1,23 +1,3 @@
-if (room == rm_stage_1_instruction_1) {
-	dest_room = rm_stage_1_instruction_2
-}
-
-if (room == rm_stage_1_instruction_2) {
-	dest_room = rm_stage_1_instruction_3
-}
-
-if (room == rm_stage_1_instruction_3) {
-	dest_room = rm_stage_1_instruction_4
-} 
-
-if (room == rm_stage_2_instruction_1) {
-	dest_room = rm_stage_2_instruction_2
-}
- 
-if (room == rm_stage_3_instruction_1) {
-	dest_room = rm_stage_3_instruction_2
-}
-
-if (room == rm_stage_4_instruction_1) {
-	dest_room = rm_stage_4_instruction_2
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bddc0ecc2fadf12bc20f2cd299c4c0c3ec5b3a4ed7f6093eefbdc2ad96820120
+size 586

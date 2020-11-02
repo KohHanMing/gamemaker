@@ -1,14 +1,3 @@
-with(obj_game) {
-	playerHealth -= 5;
-	col_g = 0;
-	col_b = 0;
-	heartTimer = 30;
-	isDamage = true;
-}
-
-with(other) {
-	instance_destroy();
-	repeat(10) {
-		instance_create_layer(x, y, "Instances", obj_debris);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cd7ff7f7a5804adf2796d69fcc278efa732db1d9c1c7c49aef672ee9d7e04f7
+size 254

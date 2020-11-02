@@ -1,18 +1,3 @@
-if (sprite_index == spr_attack_charging) {
-	
-} else {
-	if (sprite_index == spr_attack_weak) {
-		instance_create_layer(x, y, "Instances", obj_attack_weak);
-	} else if (sprite_index == spr_attack_medium) {
-		instance_create_layer(x, y, "Instances", obj_attack_medium);
-	} else if (sprite_index == spr_attack_strong) {
-		instance_create_layer(x, y, "Instances", obj_attack_strong);
-	} else {
-	
- 	}
-	instance_destroy();
-	with (obj_game) {
-		playerActions += 1;
-	}
-}
-	
+version https://git-lfs.github.com/spec/v1
+oid sha256:60eb0b8fa1dd2c0994b1e9e360b9093d3272a6e56c9cd569ab7dfcff778ccb0f
+size 464

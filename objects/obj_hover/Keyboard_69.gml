@@ -1,20 +1,3 @@
-if (global.isPaused) {
-	
-} else {
-	//================== Only available from stage 4 onwards ============
-	var stage = 1;
-	with (obj_stage_handler) {
-		stage = currentStage;
-	}
-	if (stage == 4 || stage == 5) {
-		if (sprite_index = spr_defense_bar) {
-			rotationAngle -= 2.5;
-			direction = rotationAngle;
-			image_angle = rotationAngle;
-		} else {
-	
-		}
-	} else {
-	
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:afa2b806c778edf2488b5ba982d7676af06f89df3cfea6a2dc54bc3dd5b60842
+size 369

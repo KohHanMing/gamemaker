@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-if (global.isPaused) {
-	
-} else {
-	instance_destroy();
-	with (obj_game) {
-		playerActions += 1;
-	}
-=======
-instance_destroy();
-with (obj_game) {
-	playerActions += 1;
-}
-
-
-// destroy emptypod
-nearest = instance_nearest(x,y,obj_emptypod)
-
-with (nearest) {
-	instance_destroy()
->>>>>>> 06395ac7c3518d8df9f2a7d2444ebcb862570f4d
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8d880f998af4d71bb316063b987ef825fa22eb864fe2281940e26ed7ffaa1b3
+size 336

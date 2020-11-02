@@ -1,28 +1,3 @@
-instance_destroy();
-var myDirection = direction;
-
-with (other) {
-	bounceLimit = 0;
-	isDeflected = true;
-	var projetileInverseDirection = direction - 180
-	if (myDirection > 270) {
-			var myInverseDirection = myDirection - 180;
-			var myAngleWithOrigin = 360 - myDirection;
-			var finalAngle = myInverseDirection - projetileInverseDirection - myAngleWithOrigin;
-			direction = finalAngle;
-			image_angle = finalAngle;
-	} else if (myDirection < 90) {
-		var myInverseDirection = myDirection + 180;
-		var finalAngle = myInverseDirection - projetileInverseDirection
-		direction = finalAngle;
-		image_angle = finalAngle;
-	}
-}
-
-with (obj_game) {
-	playerActions +=1;
-}
-
-with (durationBar) {
-	instance_destroy();	
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:274393ddf589a317f32cf3b048b527c0388aeda8bac3bb8164c366b54035551b
+size 755
