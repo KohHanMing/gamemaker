@@ -1,3 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-sprite_index = spr_starts_hover
+version https://git-lfs.github.com/spec/v1
+oid sha256:45b5f5a71982f7ed27ecfae5256d33f76dcf55cd9d5cb349cbed32452a16cdfb
+size 114

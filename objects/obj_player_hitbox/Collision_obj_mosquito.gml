@@ -1,23 +1,3 @@
-if (!hasRecordedMeleeDamage) {
-	with(obj_game) {
-		isDamage = true;
-		playerHealth -= 20;
-		col_g = 0;
-		col_b = 0;
-		heartTimer = 30;
-	}
- hasRecordedMeleeDamage = true; //reset by obj_mosquito
-}
-
-with(obj_mosquito) {
-	hasExecutedMelee = true;
-	canAttack = false;
-	hasResetMelee = false;
-	mosquitoIsDrill = false
-	h_accel = default_h_accel
-	momentum_gained = 0
-	mosquitoSpinTimer = mosquitoSpinBuildupDuration
-	sprite_index = mosquito_normal
-	hspeed = default_hspeed
-	vspeed = default_vspeed
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:94454b56039969c4426be35128971112a4c8be979df454ea1946a5dac6ed1cfc
+size 592

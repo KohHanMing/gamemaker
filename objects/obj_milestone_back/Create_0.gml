@@ -1,10 +1,3 @@
-COLOR_YELLOW = make_color_rgb(255, 255, 0);
-COLOR_BLUE = make_color_rgb(65, 170, 255);
-COLOR_PURPLE = make_color_rgb(215, 115, 255);
-COLOR_GREEN = make_color_rgb(130, 255, 145);
-COLOR_RED = c_red;
-
-x = xstart - 8;
-image_xscale = 1;
-image_alpha = 1;
-image_blend = COLOR_BLUE
+version https://git-lfs.github.com/spec/v1
+oid sha256:b35d0d9d0d78bb7ee2649c0475277ae7210a101b87b6531149c66d9df7968bac
+size 273

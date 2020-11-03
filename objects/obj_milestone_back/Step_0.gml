@@ -1,19 +1,3 @@
-var stage = 1;
-
-with (obj_stage_handler) {
-	stage = currentStage;
-}
-
-if (stage == 1) {
-	image_blend = COLOR_BLUE;
-} else if (stage == 2) {
-	image_blend = COLOR_GREEN;
-} else if (stage == 3) {
-	image_blend = COLOR_YELLOW;
-} else if (stage == 4) {
-	image_blend = COLOR_RED;
-} else if (stage == 5) {
-	image_alpha = 0;
-} else {
-	
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc1ca76faa6eb8ccd330171453c38f615413bbe04e9ef85c7d7a23b80bfdf0b8
+size 327

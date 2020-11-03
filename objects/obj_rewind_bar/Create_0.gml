@@ -1,12 +1,3 @@
-x = 820;
-y = 873;
-col_r = 255;
-col = make_colour_rgb(255, 255, 255);
-image_blend = col;
-image_yscale = 0.01;
-
-hasDrawnRewind = false;
-rechargeTimer = 3600;
-
-hasPressedRewind = false;
-rewindTimer = 0;
+version https://git-lfs.github.com/spec/v1
+oid sha256:412629073fa39226c44f131ac41cdf40154cfed40a1465f00aacc4e925ff2a68
+size 199
