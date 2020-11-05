@@ -1,16 +1,3 @@
-if (global.isPaused) {
-	speed = 0;
-} else {
-	speed = 1;
-	image_alpha -= 0.02;
-	timer -= 1;
-	if (timer % 60 = 0) {
-		image_alpha = 1;
-		x = floor(random_range(50, 850))
-		y = floor(random_range(50, 850))
-	}
-
-	if (timer == 0) {
-		instance_destroy();	
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:267bbb5e8c069a4a0d4a975e53f66909b84396f9d0e58049e1b724c14abd6d02
+size 253

@@ -1,33 +1,3 @@
-{
-  "spriteId": null,
-  "solid": false,
-  "visible": true,
-  "spriteMaskId": null,
-  "persistent": true,
-  "parentObjectId": null,
-  "physicsObject": false,
-  "physicsSensor": false,
-  "physicsShape": 1,
-  "physicsGroup": 1,
-  "physicsDensity": 0.5,
-  "physicsRestitution": 0.1,
-  "physicsLinearDamping": 0.1,
-  "physicsAngularDamping": 0.1,
-  "physicsFriction": 0.2,
-  "physicsStartAwake": true,
-  "physicsKinematic": false,
-  "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_stage_handler","path":"objects/obj_stage_handler/obj_stage_handler.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
-  "properties": [],
-  "overriddenProperties": [],
-  "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
-  },
-  "resourceVersion": "1.0",
-  "name": "obj_stage_handler",
-  "tags": [],
-  "resourceType": "GMObject",
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1a7f134f3d18beb786f2316561a0d6bbed7017636517b9ea0e5fb81dc88790d
+size 1215

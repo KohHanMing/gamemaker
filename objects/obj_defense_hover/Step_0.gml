@@ -1,7 +1,3 @@
-if (!mouse_check_button_pressed(mb_left)) {
-	x = mouse_x;
-	y = mouse_y;
-} else {
-	instance_destroy();
-	instance_create_layer(mouse_x, mouse_y, "Instances", obj_defense_bar)
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ffe859ad3f00659b692c158dfc86790fc3030120360b334a0e330c709bb36d8
+size 174

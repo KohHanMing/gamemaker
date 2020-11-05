@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<Layouts><Layout layout_name="DnDWorkspace" layout_guid="8dd5d90f-8ba2-47d5-8394-a04b63e83eca" toolbox_size="24.31655%" toolbox_anchor="Last" story_size="187.5px"><Workspace zoom="1" pan="[-807.95, 158]" /><Node hash="2EED8378" left="-312.76" top="13.4" width="259.2" height="123.8" /><Node hash="15D15AF6" left="-563.16" top="147.2" width="760" height="463.8" /></Layout></Layouts>
-=======
-<Layouts><Layout layout_name="DnDWorkspace" layout_guid="9bb08871-593b-414c-adb8-b8faab5abcf5" toolbox_size="0px" toolbox_collapsed="True" toolbox_anchor="Last" story_size="187.5px"><Workspace zoom="1" pan="[-807.95, 358]" /><Node hash="2EED8378" left="-312.76" top="13.4" width="259.3333" height="123.8" /><Node hash="15D15AF6" left="-563.16" top="147.2" width="760" height="463.8" /></Layout></Layouts>
->>>>>>> 4b3f7946fdcd4a5b23af48914a5f4236c75561e6
+version https://git-lfs.github.com/spec/v1
+oid sha256:db3f1481a16f2bacea6d051f8a1f90745caa7bd5b27db1031fc3af8c2d137094
+size 858

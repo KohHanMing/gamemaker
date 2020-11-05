@@ -1,10 +1,3 @@
-if (timer <= 0) {
-	instance_destroy();
-} else {
-	timer -= 1
-	col_r += 2
-	col_g += 2
-	col_b -= 2
-	image_blend = make_color_rgb(col_r, col_g, col_b)
-	image_xscale += 0.05
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ea1a70549e93ff57f0a18778682715d56ba78025a7e3fdcdde584d7bbbc679a
+size 170

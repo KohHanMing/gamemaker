@@ -1,33 +1,3 @@
-{
-  "spriteId": null,
-  "solid": false,
-  "visible": true,
-  "spriteMaskId": null,
-  "persistent": false,
-  "parentObjectId": null,
-  "physicsObject": false,
-  "physicsSensor": false,
-  "physicsShape": 1,
-  "physicsGroup": 1,
-  "physicsDensity": 0.5,
-  "physicsRestitution": 0.1,
-  "physicsLinearDamping": 0.1,
-  "physicsAngularDamping": 0.1,
-  "physicsFriction": 0.2,
-  "physicsStartAwake": true,
-  "physicsKinematic": false,
-  "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_attack_mouse","path":"objects/obj_attack_mouse/obj_attack_mouse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
-  "properties": [],
-  "overriddenProperties": [],
-  "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
-  },
-  "resourceVersion": "1.0",
-  "name": "obj_attack_mouse",
-  "tags": [],
-  "resourceType": "GMObject",
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:85df10fafb0c8e40c55ee3974bc10d4350a813d0fe32f48d819624271d4c71a5
+size 941

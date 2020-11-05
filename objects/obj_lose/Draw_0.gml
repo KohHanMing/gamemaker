@@ -1,28 +1,3 @@
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-
-draw_set_font(FontLarge);
-
-draw_set_colour(c_red);
-var l70043F01_0=($FFFFFF00 >> 24);
-draw_set_alpha(1);
-draw_text_transformed(room_width/2, room_height/2 - 100, string("You Died!") + "", 1, 1, 0);
-
-draw_set_colour($FFFFFFFF & $ffffff);
-var l7CF229E3_0=($FFFFFFFF >> 24);
-
-if(!variable_instance_exists(id, "__dnd_score")) __dnd_score = 0;
-draw_text(room_width/2, room_height/2, string("Score: ") + string(__dnd_score));
-
-draw_set_colour($FF05CDFF & $ffffff);
-var l6CFDA850_0=($FF05CDFF >> 24);
-
-draw_text_transformed(room_width/2, room_height/2 + 80, string("Press R to play again") + "", 0.4, 0.4, 0);
-
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-
-draw_set_colour($FFFFFFFF & $ffffff);
-var l4F998875_0=($FFFFFFFF >> 24);
-draw_set_alpha(1);
-draw_set_font(Font1);
+version https://git-lfs.github.com/spec/v1
+oid sha256:9847e5f47047bdd4736d8f3e9fe90208943e74f4819a381f0f753bce58a78983
+size 859

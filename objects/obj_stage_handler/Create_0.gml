@@ -1,12 +1,3 @@
-currentStage = 1; 
-if (currentStage == 1) {
-	currentMaxPoints = 150;
-} else if (currentStage == 2) {
-	currentMaxPoints = 400;
-} else if (currentStage == 3) {
-	currentMaxPoints = 600;
-} else if (currentStage == 4) {
-	currentMaxPoints = 800;
-} else if (currentStage == 5) {
-	currentMaxPoints = 1000;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4ba991c06e0bdc79934d44607aeded70d68b9c916955abb10a2b35318c5462c
+size 42
